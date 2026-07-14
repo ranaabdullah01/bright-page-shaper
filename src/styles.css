@@ -130,16 +130,16 @@
 
 @utility noise-overlay {
   position: relative;
-}
-@utility noise-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(color-mix(in oklab, var(--gold) 12%, transparent) 1px, transparent 1px);
-  background-size: 3px 3px;
-  opacity: 0.15;
-  mix-blend-mode: overlay;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(color-mix(in oklab, var(--gold) 12%, transparent) 1px, transparent 1px);
+    background-size: 3px 3px;
+    opacity: 0.15;
+    mix-blend-mode: overlay;
+  }
 }
 
 @keyframes marquee {
